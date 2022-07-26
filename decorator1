@@ -1,0 +1,15 @@
+def gift_function():
+    print("Я — подарунок!")
+
+
+def decorator_function(gift_to_wrap_function):
+
+    print("Я — святкова обгортка! Я обгорну подарунок.")
+    gift_to_wrap_function()
+    print("Подарунок обгорнуто!")
+
+print("Варіант без обгортки")
+gift_function()
+
+print("\n\nОбгортка1, функція в іншій функції")
+decorator_function(gift_function)
