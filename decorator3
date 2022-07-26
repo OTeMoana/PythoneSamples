@@ -1,0 +1,25 @@
+import time
+#згадую декоратори і таймер
+
+def gift_function(time_delay):
+    print("Я — подарунок!")
+    time.sleep(time_delay)
+    print(f"Оп, пройшло {time_delay} секунд(и)")
+
+
+
+def decorator_function(gift_to_wrap_function):
+    def wrapper_function(var1):
+        t1 = time.perf_counter()
+        gift_to_wrap_function(var1)
+        t2 = time.perf_counter()
+        print(f"Час виконання функції t =  {(t2 - t1):4.2f}")
+        #4.2f бо знаю що так точно працює
+    return wrapper_function
+
+
+
+
+decorator_delegate = decorator_function(gift_function)
+
+decorator_delegate(3)
