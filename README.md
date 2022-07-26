@@ -1,2 +1,5 @@
-# PythoneSamples
-Here I started new branch of PythoneSamples. For the king!
+Задача показати BenchMarking і розказати про декоратори
+
+Задача додати сторінку з посиланнями
+
+і спробувати додати Py file, який буде працювати як веб сторінка
