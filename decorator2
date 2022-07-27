@@ -1,4 +1,3 @@
-
 def gift_function(str5):
     print(str5)
 
