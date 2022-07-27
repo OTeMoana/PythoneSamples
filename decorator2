@@ -1,0 +1,24 @@
+def gift_function(str5):
+    print(str5)
+
+
+def decorator_function(gift_to_wrap_function):
+    def wrap_function(str6): # наче оця штука потрібна щоб передати параметри
+        print("Я — святкова обгортка! Я обгорну подарунок.")
+        gift_to_wrap_function(str6)
+        print("Подарунок обгорнуто!")
+
+    return wrap_function
+
+#Варіант без обгортки
+gift_function("Абаба")
+
+#Обгортка, утворення об'єкту функції
+decorated_gift_function = decorator_function(gift_function)
+
+
+#Виклик об'єкта функції
+decorated_gift_function("Галамага")
+
+# Варіант виклику, без утворення об'єкта функції, або без утворення делегату
+decorator_function(gift_function)("nur fur mich")
